@@ -1,0 +1,90 @@
+1) Create a folder called Props inside src.
+
+2) Inside Props create the following components
+   - Restaurant.jsx
+   - Dish.jsx
+   - Trainer.jsx
+   - Management.jsx
+   - BranchHead.jsx
+   - Student.jsx
+
+3) Inside Restaurant.jsx
+   - Accept props using destructuring.
+   - Render
+       Restaurant Name
+       Restaurant Location
+       Restaurant Pincode
+   - Display the values dynamically using props received from the parent component.
+
+4) Inside Dish.jsx
+   - Accept props using destructuring.
+   - Render
+       Dish Name
+       Dish Price
+   - Display the values dynamically using props received from the parent component.
+
+5) Inside Trainer.jsx
+   - Accept props using destructuring.
+   - Render
+       Trainer Image
+       Trainer Name
+       Trainer Age
+       Trainer Designation
+   - Display all values dynamically.
+
+6) Create the following nested component structure for Prop Drilling
+
+   Management.jsx
+          ↓
+   BranchHead.jsx
+          ↓
+   Student.jsx
+
+7) Inside Management.jsx
+   - Create the following data
+     coursename = Java/Python Fullstack
+     price = 29950
+     yop = 2026
+
+   - Also pass the following message through children
+
+     Note Offer Closes Soon
+
+   - Send all the above data to Student.jsx through BranchHead.jsx using Props (Prop Drilling).
+
+8) Inside Student.jsx
+   - Receive and display
+       Course Name
+       Course Price
+       Year Of Passout
+       Note Message
+
+9) Import all components into App.jsx.
+
+10) Inside App.jsx
+    - Pass the following data to Restaurant.jsx
+
+      name = Paradise
+      location = Hyderabad
+      pincode = 500060
+
+    - Pass the following data to Dish.jsx
+
+      name = Chicken Biryani
+      price = 299
+
+    - Pass the following data to Trainer.jsx
+
+      image = any trainer image
+      name = Rahul
+      age = 26
+      designation = React Trainer
+
+    - Render
+      Restaurant
+      Dish
+      Trainer
+      Management
+
+11) Render App component into main.jsx.
+

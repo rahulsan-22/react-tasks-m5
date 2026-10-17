@@ -1,0 +1,66 @@
+//!Activity 1: Predict the Output
+
+//*Question 1: Ternary Operator
+-->Predict what appears on the screen.
+
+const Condition = () => {
+  let isLoggedIn = true;
+  return (
+    <div>
+      {isLoggedIn ? <h1>Welcome Admin</h1> : <h1>Please Login</h1>}
+    </div>
+  );
+};
+export default Condition;
+
+//*Question 2: Logical AND (&&)
+-->What will React display?
+
+const Condition = () => {
+  let hasNotification = false;
+  return (
+    <div>
+      {hasNotification && <h2>New Message!</h2>}
+      <p>Dashboard</p>
+    </div>
+  );
+};
+export default Condition;
+
+//!Activity 2: Debug the Code
+-->A student wants to display a message based on the number of holidays. -->However, the code contains mistakes.
+-->Find and correct the errors.
+
+const Condition = () => {
+  let holidays = 2;
+  let result;
+  if (holidays > 3) {
+    result = <h1>Go on a trip</h1>;
+  } else if (holidays >= 2 && holidays <= 3) {
+    result = <h1>Go to hometown</h1>;
+  } else if (holidays >= 1 && holidays < 2) {
+    result = <h1>Explore Hyderabad</h1>;
+  } else {
+    result = <h1>Go to work</h1>;
+  }
+  return;
+  result;
+};
+export default Condition;
+
+
+//!Student instructions
+- Identify the mistake in the return statement.
+- Correct the code so the selected JSX element appears on the screen.
+- Predict the output when holidays = 2.
+
+//!Activity 3: Build a Mini Shopping UI
+-->Business scenario: You are developing a simple shopping application. The UI should change depending on the user's login status and cart quantity.
+-->Create a component named ShoppingCondition with these requirements:
+- If isLoggedIn is true, display Welcome Back!; otherwise, display Please Login.
+- Declare the actual value of cartCount to 3
+- Use an if-else statement and an element variable named result to display one of these messages:
+  - More than 5 items: Bulk Shopping
+  - 1 to 5 items: Regular Shopping
+  - 0 items: Your Cart is Empty
+- If cartCount is greater than 0 only then display the cart message as Your cart has cartCount Items

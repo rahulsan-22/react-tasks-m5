@@ -1,0 +1,125 @@
+Task: QSpiders Student Admission Portal
+
+1. Create a folder called Assessment inside src.
+
+2. Inside Assessment create the following components:
+
+   - Navbar.jsx
+   - Institute.jsx
+   - Course.jsx
+   - Trainer.jsx
+   - Batch.jsx
+   - BranchHead.jsx
+   - Student.jsx
+   - Footer.jsx
+
+3. Inside Navbar.jsx:
+
+   - Render a logo/image.
+   - Render the following links:
+     Home
+     Courses
+     Trainers
+     Contact
+
+4. Inside Institute.jsx:
+
+   - Accept the following props using destructuring:
+     name
+     location
+     establishedYear
+
+   - Display all values dynamically.
+
+5. Inside Course.jsx:
+
+   - Accept the following props using destructuring:
+     coursename
+     duration
+     fees
+
+   - Display all values dynamically.
+
+6. Inside Trainer.jsx:
+
+   - Accept the following props using destructuring:
+     image
+     trainerName
+     designation
+     experience
+
+   - Display all values dynamically.
+
+7. Inside Footer.jsx:
+
+   - Accept a prop called companyName.
+
+   - If companyName is not passed, display:
+     "QSpiders Dilsukhnagar"
+
+   - This should be implemented using Default Props.
+
+8. Create the following nested structure:
+
+   Batch.jsx
+   ↓
+   BranchHead.jsx
+   ↓
+   Student.jsx
+
+9. Inside App.jsx create the following data:
+
+   instituteName = "QSpiders"
+   location = "Dilsukhnagar"
+   establishedYear = 2005
+
+   coursename = "Java Full Stack"
+   duration = "6 Months"
+   fees = 24950
+
+   trainerName = "Rahul"
+   designation = "React Trainer"
+   experience = "2 Years"
+
+10. Pass the above data to the required components using Props.
+
+11. Inside Batch.jsx pass the following data using Prop Drilling:
+
+    batchCode = "JFSD-101"
+    yop = 2026
+    placementStatus = "Open For Placements"
+
+    Note Message:
+    "Admissions Closing Soon"
+
+12. Send all the above data from Batch.jsx to Student.jsx through BranchHead.jsx.
+
+13. Inside Student.jsx:
+
+    - Display all the received values.
+    - Also display the Note Message.
+
+14. Inside App.jsx render Footer component using Props Children.
+
+    Example:
+
+    <Footer>
+       <h2>Thank You For Visiting Our Portal</h2>
+       <p>All The Best For Your Career</p>
+    </Footer>
+
+15. Footer.jsx should render the received children content.
+
+16. Inside App.jsx render all components in the following order:
+
+    Navbar
+    Institute
+    Course
+    Trainer
+    Batch
+    Footer
+
+17. Display today's date dynamically somewhere in the application using Expressions.
+
+18. Use Fragments in at least three components.
+

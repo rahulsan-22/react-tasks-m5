@@ -1,0 +1,10 @@
+1) Create a folder called Components into src
+2) Create 2 components called Greet.jsx and Welcome.jsx.
+3) Inside Greet.jsx:
+   - Render a heading (h1) with the content:
+     Good Morning 🌤️
+4) Inside Welcome.jsx:
+   - Render a heading (h1) with the content:
+     Welcome User 😁
+5) Render both components inside App.jsx.
+6) Render App component into main.jsx.

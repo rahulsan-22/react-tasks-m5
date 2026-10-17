@@ -1,0 +1,75 @@
+//!Task 1: Predict output or behavior
+-->Read the code carefully. Do not run it. Write the output you expect to see on the screen.
+
+//!Code
+function App() {
+  const fruits = ["Apple", "Mango", "Orange"];
+
+  return (
+    <div>
+      <h2>My Fruits</h2>
+      <ul>
+        {fruits.map((fruit, index) => (
+          <li key={index}>{fruit}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default App;
+
+//!Your tasks
+1. How many list items will appear?
+2. What text will appear on the screen?
+3. Which JavaScript method creates the list items?
+4. What is the purpose of key={index} in this example?
+
+//!Task 2: Debug the Mistake
+-->A developer is building a student list. The list appears, but React displays a warning in the console.
+-->Find the mistake and correct the code.
+
+//!Code:
+function StudentList() {
+  const students = ["Rahul", "Priya", "Amit"];
+
+  return (
+    <ul>
+      {students.map((student) => (
+        <li>{student}</li>
+      ))}
+    </ul>
+  );
+}
+
+export default StudentList;
+
+//! Your tasks
+1. Identify the mistake.
+2. Rewrite the corrected JSX.
+3. Explain why React needs a key when rendering a list.
+4. Suggest a better key if each student has a unique student ID.
+
+//!Task 3: Build a Product List
+-->You are building a product page for an online shopping website. The owner wants to display product names and prices.
+-->Create a React component called ProductList using the given data.
+
+//!Code:
+const products = [
+  { id: 101, name: "T-Shirt", price: 499 },
+  { id: 102, name: "Shoes", price: 1499 },
+  { id: 103, name: "Watch", price: 999 }
+];
+
+//!Your tasks
+1. Use .map() to display all three products.
+2. Display each product's name and price.
+3. Use the product's unique id as its key.
+4. Display the price with the ₹ symbol.
+
+//!Expected screen layout
+Our Products
+T-Shirt - ₹499
+Shoes - ₹1499
+Watch - ₹999
+-->Write the complete ProductList component.

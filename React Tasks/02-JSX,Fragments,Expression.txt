@@ -1,0 +1,53 @@
+1) Create a folder called JSX inside src.
+
+2) Inside JSX create the following components:
+   - Navbar.jsx
+   - Welcome.jsx
+   - Product.jsx
+   - Rules.jsx
+
+3) Inside Navbar.jsx:
+   - Render a logo/image.
+   - Render three anchor tags:
+     Home, About, Contact.
+
+4) Inside Welcome.jsx:
+   - Display the heading:
+     Welcome User 🌤️
+   - Display today's date dynamically inside a paragraph tag using JavaScript Expression.
+
+5) Inside Product.jsx:
+   - Create an object:
+
+     let product = {
+       name: "Parle-G",
+       price: 5,
+       availability: true
+     }
+
+   - Display product name inside a heading tag.
+   - Display product price inside a paragraph tag.
+   - Based on availability:
+       true  → " InStock 😁"
+       false → "Out of Stock 🥺"
+
+6) Inside Rules.jsx:
+   - Display the heading:
+     Rules of JSX
+
+   - Create an ordered list containing JSX rules.
+
+   - At the end, display:
+       Definition of Fragment.
+       Syntax of Fragment.
+
+7) Use React Fragment to wrap multiple elements wherever required instead of unnecessary div tags.
+
+8) Render all the components inside App.jsx in the following order:
+   - Navbar
+   - Welcome
+   - Product
+   - Rules
+
+9) Render App component into main.jsx.
+
