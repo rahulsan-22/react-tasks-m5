@@ -1,0 +1,82 @@
+//!Activity 1: Predict the Output
+--> Read the code and write what appears on the screen before clicking any button.
+
+import { Component } from "react";
+class Product extends Component {
+  state = {
+    productName: "Wireless Mouse",
+    price: 799
+  };
+  render() {
+    return (
+      <>
+        <h2>{this.state.productName}</h2>
+        <p>Price: ₹{this.state.price}</p>
+      </>
+    );
+  }
+}
+export default Product;
+
+
+Questions:
+1. What product name is displayed?
+2. What price is displayed?
+3. Which keyword is used to access state values in  class component?
+
+
+//!Activity 2: Debug the Mistake
+--> Find the mistake and correct the code so that clicking the button increases the stock quantity by one.
+
+import { Component } from "react";
+class Stock extends Component {
+  state = {
+    quantity: 10
+  };
+
+  addStock = () => {
+    this.state.quantity = this.state.quantity + 1;
+  };
+
+  render() {
+    return (
+      <>
+        <h2>Available Stock: {this.state.quantity}</h2>
+        <button onClick={this.addStock}>
+          Add Stock
+        </button>
+      </>
+    );
+  }
+}
+
+export default Stock;
+
+
+Questions:
+1. Why is directly modifying state incorrect?
+2. Which React method should be used?
+3. Write the corrected addStock method.
+
+//!Activity 3: Build a Business Feature
+-->A small café wants a simple order-status component for its staff.
+Student task: 
+- Create a class component named OrderStatus with the following requirements:
+- Initialize the state with customerName: "Ananya" and status: "Preparing".
+- Display the customer name and current order status.
+- Add a button named Mark as Ready.
+- When clicked, update the status to "Ready".
+- After clicking, display the updated status without refreshing the page.
+- Use this.setState() to update the state.
+
+//!Expected screen before clicking:
+Café Order
+Customer: Ananya
+Status: Preparing
+[ Mark as Ready ]
+
+//!Expected screen after clicking:
+Café Order
+Customer: Ananya
+Status: Ready
+[ Order ready for collection! ]
