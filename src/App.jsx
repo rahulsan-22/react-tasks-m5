@@ -59,10 +59,20 @@
 // export default App
 
 //! 5)Conditional Rendering
-import ShoppingCondition from './ConditionalRendering/ShoppingCondition'
+// import ShoppingCondition from './ConditionalRendering/ShoppingCondition'
+
+// const App = () => {
+//   return <ShoppingCondition/>
+// }
+
+// export default App
+
+
+//! 6)State
+import OrderStatus from './State/OrderStatus'
 
 const App = () => {
-  return <ShoppingCondition/>
+  return <OrderStatus/>
 }
 
 export default App
