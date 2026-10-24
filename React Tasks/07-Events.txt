@@ -1,0 +1,54 @@
+//!Activity 1: Predict the Output
+-->Read the code and predict what happens when the button is clicked.
+
+const PriceChecker = () => {
+  const showPrice = (price) => {
+    console.log(`Product price: ₹${price}`);
+  };
+  return (
+    <button onClick={() => showPrice(1499)}>
+      Check Price
+    </button>
+  );
+};
+
+export default PriceChecker;
+
+Questions:
+1. What appears in the console when the button is clicked?
+2. Will showPrice() execute automatically when the component renders?
+3. Why is an arrow function used inside onClick?
+
+//!Activity 2: Debug the Event
+-->The developer wants to display an alert when the user clicks the button. However, the code has a mistake.
+
+const Welcome = () => {
+  const showWelcome = () => {
+    alert("Welcome to our website!");
+  };
+  return (
+    <button onClick={showWelcome()}>
+      Welcome
+    </button>
+  );
+};
+export default Welcome;
+
+
+Tasks:
+1. Identify the mistake.
+2. Explain when showWelcome() executes in the given code.
+3. Rewrite the button correctly.
+4. Provide an alternative using an arrow function.
+
+//!Activity 3: Build a Login Form
+Scenario: A small coaching institute needs a basic login form for its students.
+
+Student instructions: 
+- Create a StudentLogin component that meets these requirements:
+- Add an email input and a password input.
+- When an input receives focus, change its background to light blue.
+- When an input loses focus, change its background to white.
+- Log the email value to the console whenever the user types.
+- When the form is submitted, prevent the page from refreshing.
+- Display Login form submitted successfully! in the console.
