@@ -1,0 +1,69 @@
+//!Activity 1: Predict the Output
+-->Study the code and write the console output in the correct order.
+
+import { Component } from 'react';
+class Counter extends Component {
+  constructor() {
+    super();
+    this.state = { count: 0 };
+    console.log("A");
+  }
+  componentDidMount() {
+    console.log("C")
+  }
+  componentDidUpdate() {
+    console.log("D");
+  }
+  render() {
+    console.log("B");
+    return (
+      <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+        Count: {this.state.count}
+      </button>
+    );
+  }
+}
+
+export default Counter;
+
+
+Tasks:
+1. Predict the console output when the component first loads.
+2. What appears in the console after clicking the button once?
+3. Which lifecycle method runs only once during normal mounting?
+
+//!Activity 2: Debug the Lifecycle
+-->A developer wants to start a timer when a component appears and stop it when the component is removed. However, the code has mistakes.
+
+import { Component } from 'react';
+class Timer extends Component {
+  componentDidMount() {
+    this.timer = setInterval(() => {
+      console.log("Timer running");
+    }, 1000);
+  }
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+  render() {
+    return <h2>Timer Component</h2>;
+  }
+}
+export default Timer;
+
+Tasks:
+1. Find the mistake in the cleanup method.
+2. Correct the code so the timer stops when the component unmounts.
+3. Explain why cleanup is necessary.
+
+//!Activity 3: Small Business Task
+-->A shop wants a React class component to display the number of products sold. When the component loads, it should log a message. When the count changes, it should log the updated count. When the component is removed, it should log a cleanup message.
+
+Requirements:
+- Initialize count to 0 in constructor().
+- Display Products Sold: 0.
+- Add an Sell Product button to increment the count.
+- Use componentDidMount() to log "Sales Dashboard Loaded".
+- Use componentDidUpdate() to log the latest count.
+- Use componentWillUnmount() to log "Sales Dashboard Removed".
+Student deliverable: Write the complete SalesDashboard class component.
