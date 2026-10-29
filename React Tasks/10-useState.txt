@@ -1,0 +1,108 @@
+//! Activity 1: Predict the Output or Behavior
+--> A movie ticket booking application allows users to select seats. Initially, one seat is selected. Whenever the user clicks the button, the number of selected seats increases by two.
+
+import { useState } from "react";
+function SeatBooking() {
+  const [seats, setSeats] = useState(1);
+  function selectSeats() {
+    setSeats(seats + 2);
+  }
+  return (
+    <div>
+      <h2>Selected Seats: {seats}</h2>
+      <button onClick={selectSeats}>
+        Select More Seats
+      </button>
+    </div>
+  );
+}
+export default SeatBooking;
+
+Questions
+Q1.What will be displayed when the component first renders?
+Q2.What will be displayed after clicking the button once?
+Q3.What will be displayed after clicking the button three times in total?
+Q4.Why does the displayed number change without manually modifying the HTML?
+
+//!Activity 2: Find and Fix the Mistake
+-->A shopping website displays the number of items in a customer's wishlist.
+-->The developer wrote the following code, but the application does not behave as expected.
+
+import { useState } from "react";
+function Wishlist() {
+  const [items, setItems] = useState(0);
+  function addItem() {
+    items = items + 1;
+    setItems(items);
+  }
+  return (
+    <div>
+      <h2>Wishlist Items: {items}</h2>
+      <button onClick={addItem}>
+        Add to Wishlist
+      </button>
+    </div>
+  );
+}
+export default Wishlist;
+
+Your Tasks
+Q1.Identify the mistake in the `addItem()` function.
+Q2.Why is directly assigning a new value to `items` incorrect?
+Q3.Rewrite the `addItem()` function correctly.
+Q4.Modify your solution to use a functional state update.
+
+
+//!Activity 3: Apply `useState()` to a Small Business
+A small online clothing store wants to display its delivery status to customers.
+The application should initially display:
+
+Delivery Status: Order Placed
+
+The customer can click a button to move the order to the next status.
+
+The required order statuses are:
+
+1. Order Placed
+2. Packed
+3. Shipped
+4. Delivered
+
+//!Your Task
+
+Create a React functional component named `DeliveryTracker` that satisfies the following requirements.
+
+**Requirement 1: Initialize State**
+Use `useState()` to store the delivery status.
+The initial status must be `"Order Placed"`.
+
+**Requirement 2: Update the Status**
+Create a button named Update Delivery Status.
+Each click should move the order to the next status.
+
+**Requirement 3: Display the Updated Status**
+Display the current status inside an `<h2>` element.
+
+**Requirement 4: Handle the Final Status**
+Once the status becomes `"Delivered"`, display the message:
+Your order has been delivered!
+
+The button should no longer allow the user to advance to another status.
+
+
+
+//!Expected Behavior
+|   Action       | Expected Display |
+|------------- |---------------|
+| Initial render | Order Placed |
+| First click    | Packed |
+| Second click  | Shipped |
+| Third click    | Delivered |
+| After delivery | Your order has been delivered! |
+
+//!Student Instructions
+- Create the `DeliveryTracker` component.
+- Import and use `useState()`.
+- Use a function to update the delivery status.
+- Use conditional rendering to display the delivery message.
+- Disable the button when the order is delivered.
