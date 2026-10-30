@@ -1,0 +1,86 @@
+//!Activity 1: Predict the Output 🎯
+-->You are developing a shopping application. Whenever the user changes the selected product quantity, you want to display a message in the console.
+import { useState, useEffect } from "react";
+function ShoppingCart() {
+    const [quantity, setQuantity] = useState(1);
+    useEffect(() => {
+        console.log("Quantity Updated");
+    }, [quantity]);
+    return (
+        <>
+            <h2>Quantity: {quantity}</h2>
+            <button onClick={() => setQuantity(quantity + 1)}>
+                Add Item
+            </button>
+        </>
+    );
+}
+export default ShoppingCart;
+
+Questions:
+Q1. What will be displayed in the console when the component renders for the first time?
+Q2. The user clicks the Add Item button once. What will be displayed in the console?
+Q3. The user clicks the button three times. How many times will "Quantity Updated" be logged in total, including the initial render?
+Q4. What happens if you change the dependency array from [quantity] to []?
+Q5. Why do we use [quantity] in this example?
+
+
+//!Activity 2: Debug the Mistake 🐛
+-->You are developing a student dashboard that displays a student's name.
+Whenever the student's name changes, the application should display the updated name in the console.
+
+import { useState, useEffect } from "react";
+function StudentDashboard() {
+    const [name, setName] = useState("Rahul");
+    useEffect(() => {
+        console.log("Student Name:", name);
+    }, []);
+    return (
+        <>
+            <h2>Student: {name}</h2>
+            <button onClick={() => setName("Arjun")}>
+                Change Student
+            </button>
+        </>
+    );
+}
+export default StudentDashboard;
+
+//!The Problem
+When the component initially renders, the console displays:
+Student Name: Rahul
+When the user clicks Change Student, the heading updates to Arjun, but the console does not display the updated name.
+
+Questions:
+Q1. Identify the mistake in the code.
+Q2. Correct the code so that the effect executes after the initial render and whenever the student's name changes.
+Q3. Predict the console output after the following actions:
+1. Open the application.
+2. Click Change Student once.
+3. Click Change Student again.
+Q4. Why is an empty dependency array incorrect for this requirement?
+
+//!Activity 3: Build a Small Business Feature 🛒
+-->You are working for an online shopping company.
+The company wants the browser tab title to display the current number of items in the shopping cart.
+
+For example:
+- When the cart contains 0 items, the title should be Cart: 0 Items.
+- When the cart contains 1 item, the title should be Cart: 1 Items.
+- When the cart contains 2 items, the title should be Cart: 2 Items.
+Whenever the quantity changes, the browser tab title must update automatically.
+
+Task:
+Complete the following requirements:
+Q1. Write a useEffect() that updates the browser tab title using document.title.
+Q2. Make sure the effect runs:
+- After the initial render.
+- Whenever cartCount changes.
+Q3. Test the application using these steps:
+Action	Expected browser tab title
+Open the application	Cart: 0 Items
+Click Add Item once	Cart: 1 Items
+Click Add Item again	Cart: 2 Items
+Click Remove Item once	Cart: 1 Items
+Click Remove Item again	Cart: 0 Items
+Q4. What would happen if you used an empty dependency array instead of [cartCount]?
